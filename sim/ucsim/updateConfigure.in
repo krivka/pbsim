@@ -1,0 +1,10 @@
+sed -i '660i pblaze.src\/Makefile
+96i AC_SUBST(enable_pblaze)
+88i \ \
+AC_ARG_ENABLE(pblaze, \
+[ --disable-pblaze         do not compile simulator for PicoBlaze], \
+if test $enable_pblaze != \"no\"\; then \
+   enable_plaze=\"yes\" \
+fi, \
+enable_pblaze=\"yes\") \
+\ \ ' configure.in

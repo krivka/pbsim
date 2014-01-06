@@ -1,0 +1,14 @@
+sed -i '17285i \    \"pblaze.src\/Makefile\") CONFIG_FILES=\"\$CONFIG_FILES pblaze.src\/Makefile\" \;\;
+16227s|"$| pblaze.src/Makefile"|
+2889i \ \
+\# Check whether \--enable-pblaze was given. \
+if test \"${enable_pblaze+set}\" = set\; then : \
+  enableval=\$enable_pblaze\; if test \$enable_pblaze != \"no\"\; then \
+    enable_pblaze=\"yes\" \
+  fi \
+else \
+  enable_pblaze=\"yes\" \
+fi 
+1510i \  --disable-pblaze        do not compile simulator for PicoBlaze
+867i enable_pblaze
+812i enable_pblaze' configure
