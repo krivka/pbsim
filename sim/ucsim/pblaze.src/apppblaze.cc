@@ -68,7 +68,7 @@
 static void
 print_help(const char *name)
 {
-  printf("%s: %s (uCsim %s)\n", name, VERSIONSTR);
+  printf("%s: %s (uCsim %s)\n", name, PORTVERSION, VERSIONSTR);
   printf("Usage: %s [-hHVvP] [-p prompt] [-t CPU] [-X freq[k|M]]\n"
          "       [-c file] [-s file] [-S optionlist]"
 #ifdef SOCKET_AVAIL
@@ -108,6 +108,7 @@ print_help(const char *name)
      "  -o file      At the end of simulation saves PicoBlaze state and PicoBlaze outputs into files <file>_state.xml and <file>_outputs.xml.\n"
      "\n"
      "Authors: Jiri Simek and Zbynek Krivka (krivka@fit.vutbr.cz)\n"
+     "\n"
      "Acknowledgement: This software tool has been elaborated in the\n"
      "framework of the IT4Innovations Centre of Excellence project, \n"
      "reg. no. CZ.1.05/1.1.00/02.0070 supported by Operational Programme\n"
