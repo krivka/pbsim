@@ -59,7 +59,8 @@
 #include "newcmdposixcl.h"
 #endif
 
-
+/* XXX */
+#define PORTVERSION "0.2.0"
 /*
  * Interpretation of parameters
  */
@@ -67,7 +68,7 @@
 static void
 print_help(const char *name)
 {
-  printf("%s: %s\n", name, VERSIONSTR);
+  printf("%s: %s (uCsim %s)\n", name, VERSIONSTR);
   printf("Usage: %s [-hHVvP] [-p prompt] [-t CPU] [-X freq[k|M]]\n"
          "       [-c file] [-s file] [-S optionlist]"
 #ifdef SOCKET_AVAIL
@@ -105,6 +106,13 @@ print_help(const char *name)
      "  -n file      Loads file with inputs.\n"
      "  -w value     Built-in hardware constant (only for KCPSM6).\n"
      "  -o file      At the end of simulation saves PicoBlaze state and PicoBlaze outputs into files <file>_state.xml and <file>_outputs.xml.\n"
+     "\n"
+     "Authors: Jiri Simek and Zbynek Krivka (krivka@fit.vutbr.cz)\n"
+     "Acknowledgement: This software tool has been elaborated in the\n"
+     "framework of the IT4Innovations Centre of Excellence project, \n"
+     "reg. no. CZ.1.05/1.1.00/02.0070 supported by Operational Programme\n"
+     "'Research and Development for Innovations' funded by Structural Funds\n" 
+     "of the European Union and state budget of the Czech Republic.\n"
      );
 }
 
